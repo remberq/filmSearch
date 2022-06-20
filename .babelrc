@@ -1,4 +1,7 @@
 {
-  "plugins": [["import"]],
+  "plugins": [["import", {
+    "libraryName": "antd",
+    "style": true
+  }]],
   "presets": ["@babel/preset-react"]
 }
