@@ -1,7 +1,18 @@
 .example {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
 
+.offline-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+    opacity: 0.2;
 }

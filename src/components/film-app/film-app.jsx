@@ -14,8 +14,18 @@ class FilmApp extends Component {
       filmsData: [],
       loading: true,
       error: false,
+      isOffline: false,
     }
     this.getFilms()
+  }
+
+  componentDidMount() {
+    window.addEventListener('offline', () => {
+      this.setState({ isOffline: true })
+    })
+    window.addEventListener('online', () => {
+      this.setState({ isOffline: false })
+    })
   }
 
   onError() {
@@ -35,9 +45,10 @@ class FilmApp extends Component {
   }
 
   render() {
-    const { filmsData, loading, error } = this.state
+    const { filmsData, loading, error, isOffline } = this.state
+    const isOfflineMessage = isOffline ? <div className={'offline-message'}>Lost Connection</div> : null
     const hasData = !(loading || error)
-    const errorMessage = error ? <Alert message={'Hi man'} description={'you lose'} type={'error'} /> : null
+    const errorMessage = error ? <Alert message={'Ooops!'} description={'Shit Happens!'} type={'error'} /> : null
     const loader = loading ? (
       <div className={'example'}>
         <Spin size={'large'} />
@@ -46,6 +57,7 @@ class FilmApp extends Component {
     const films = hasData ? <FilmList films={filmsData} /> : null
     return (
       <Fragment>
+        {isOfflineMessage}
         {errorMessage}
         {loader}
         {films}
