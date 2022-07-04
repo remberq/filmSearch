@@ -1,49 +1,151 @@
 .film-card {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  width: 700px;
-  height: 400px;
+  max-width: 450px;
+  width: 100%;
+  min-width: 350px;
+  height: 281px;
   margin-bottom: 40px;
   box-shadow: 5px 5px 15px #b6b4b4;
 }
 
 .film-img {
-  width: 300px;
-  height: 400px;
+  width: 183px;
+  height: 281px;
   object-fit: cover;
 }
 
 .film-card__content {
-  padding: 10px 25px;
+  position: relative;
+  padding: 0 25px;
 }
 
+.film-rating {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 9px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #E90000;
+
+}
+
+
 .film-card__title {
-  font-size: 30px;
+  width: 200px;
+  padding-top: 12px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
 }
 
 .film-card__date {
-  margin-top: 10px;
-  font-size: 15px;
-  color: gray;
+  margin-top: 7px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
+  color: #827E7E;
 }
 
 .film-card__genre {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 7px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .genre-item {
   display: block;
   padding: 3px 5px;
-  background-color: rgba(75, 74, 74, 0.14);
+  background-color: #FAFAFA;
   margin-right: 10px;
+  margin-bottom: 5px;
   text-decoration: none;
   color: #2c2b2b;
   border: 1px solid black;
+  border-radius: 2px;
 }
 
 .film-card__text {
-  margin-top: 10px;
-  font-size: 20px;
+  margin-top: 7px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #000000;
+}
+
+.rate-container {
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  width: 100%;
+}
+
+.ant-rate-star:not(:last-child) {
+  margin-right: 3px;
+}
+
+@media (max-width: 550px) {
+  .film-card {
+    width: 387px;
+    height: 245px;
+  }
+
+  .film-img {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 60px;
+    height: 91px;
+    object-fit: cover;
+  }
+
+  .film-card__content {
+    padding: 0
+  }
+
+  .film-card__title {
+    padding-left: 90px;
+    width: 90%;
+    margin-right: 0;
+  }
+
+  .film-card__date {
+    padding-left: 90px;
+  }
+
+  .film-card__genre {
+    padding-left: 90px;
+  }
+
+  .film-card__text {
+    padding-left: 8px;
+    margin-top: 15px;
+  }
+
+  .ant-rate{
+    position: absolute;
+    right: 40px;
+    bottom: 1px;
+  }
 }
