@@ -24,7 +24,8 @@
   padding-bottom: 30px;
 }
 
-.ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav {
+.ant-tabs > .ant-tabs-nav,
+.ant-tabs > div > .ant-tabs-nav {
   position: relative;
   margin: 0 auto;
   top: 30px;
@@ -34,7 +35,8 @@
   align-items: baseline;
 }
 
-.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap, .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
   position: relative;
   display: flex;
   flex: auto;

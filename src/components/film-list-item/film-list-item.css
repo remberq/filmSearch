@@ -31,10 +31,8 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #E90000;
-
+  border: 1px solid #e90000;
 }
-
 
 .film-card__title {
   width: 200px;
@@ -58,7 +56,7 @@
   display: flex;
   align-items: center;
 
-  color: #827E7E;
+  color: #827e7e;
 }
 
 .film-card__genre {
@@ -76,7 +74,7 @@
 .genre-item {
   display: block;
   padding: 3px 5px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   margin-right: 10px;
   margin-bottom: 5px;
   text-decoration: none;
@@ -121,7 +119,7 @@
   }
 
   .film-card__content {
-    padding: 0
+    padding: 0;
   }
 
   .film-card__title {
@@ -143,7 +141,7 @@
     margin-top: 15px;
   }
 
-  .ant-rate{
+  .ant-rate {
     position: absolute;
     right: 40px;
     bottom: 1px;
