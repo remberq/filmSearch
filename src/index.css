@@ -14,3 +14,7 @@
   background-color: white;
   font-family: 'Inter', sans-serif;
 }
+
+.ant-pagination {
+  text-align: center;
+}

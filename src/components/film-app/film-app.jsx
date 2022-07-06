@@ -39,7 +39,7 @@ class FilmApp extends Component {
     window.addEventListener('online', () => {
       this.setState({ isOffline: false })
     })
-    this.getFilms('return')
+    this.getFilms('zootopia')
     this.getGenres()
   }
 
@@ -104,6 +104,7 @@ class FilmApp extends Component {
               {errorMessage}
               {loader}
               {films}
+              <Pagination onChange={this.onPaginationChange.bind(this)} defaultCurrent={1} total={50} />
             </TabPane>
             <TabPane tab={'Rated'} key={'2'}>
               {isOfflineMessage}
@@ -112,9 +113,6 @@ class FilmApp extends Component {
               {hasData ? <FilmList films={ratedFilmsData} session={login} /> : null}
             </TabPane>
           </Tabs>
-          {!this.state.rateShow ? (
-            <Pagination onChange={this.onPaginationChange.bind(this)} defaultCurrent={1} total={50} />
-          ) : null}
         </div>
       </Provider>
     )

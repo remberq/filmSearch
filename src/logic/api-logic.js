@@ -9,6 +9,7 @@ class ApiLogic {
       throw new Error('Ooops!')
     }
     const res = await data.json()
+    console.log(res.results)
     return await res.results.slice(0, 6)
   }
 
